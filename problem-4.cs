@@ -1,37 +1,24 @@
 ﻿using System;
+using System.Linq;
 
-namespace proj_euler;
-
-internal class P4
+namespace proj_euler
 {
-    public static void Run()
+    internal class P4
     {
-        int largestPalindrome = 0;
-
-        for (int i = 100; i < 1000; i++)
+        public static void Run()
         {
-            for (int j = 100; j < 1000; j++)
-            {
-                int product = i * j;
-                if (product > largestPalindrome && IsPalindrome(product))
-                    largestPalindrome = product;     
-            }
+            int largestPalindrome = Enumerable.Range(100, 900)
+                .SelectMany(i => Enumerable.Range(100, 900).Select(j => i * j))
+                .Where(IsPalindrome)
+                .Max();
+
+            Console.WriteLine(largestPalindrome);
         }
 
-        Console.WriteLine(largestPalindrome);
-    }
-
-    private static bool IsPalindrome(int number)
-    {
-        string numberStr = number.ToString();
-        int length = numberStr.Length;
-
-        for (int k = 0; k < length / 2; k++)
+        private static bool IsPalindrome(int number)
         {
-            if (numberStr[k] != numberStr[length - k - 1])
-                return false;       
+            string numberStr = number.ToString();
+            return numberStr.SequenceEqual(numberStr.Reverse());
         }
-
-        return true;
     }
 }
