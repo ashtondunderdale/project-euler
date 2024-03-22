@@ -4,6 +4,6 @@ internal class Program
 {
     static void Main()
     {
-        P6.Run();
+        P7.Run();
     }
 }
