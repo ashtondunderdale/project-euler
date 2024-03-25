@@ -1,9 +1,9 @@
 ﻿namespace proj_euler;
 
-internal class Program
+internal class ProjectEuler
 {
     static void Main()
     {
-        P17.Run();
+        P20.Run();
     }
 }
