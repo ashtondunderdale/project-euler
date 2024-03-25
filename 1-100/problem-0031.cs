@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace proj_euler;
 
-namespace proj_euler._1_100
+internal class P31
 {
-    internal class problem_0031
+    public static void Run()
     {
+        int[] coins = { 1, 2, 5, 10, 20, 50, 100, 200 };
+        int target = 200;
+
+        int[] ways = new int[201];
+        ways[0] = 1;
+
+        foreach (var coin in coins)
+        {
+            for (int i = coin; i <= target; i++)
+                ways[i] += ways[i - coin];
+        }
+
+        Console.Write(ways[target]);
     }
 }
