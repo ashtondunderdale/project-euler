@@ -4,6 +4,6 @@ internal class ProjectEuler
 {
     static void Main()
     {
-        P26.Run();
+        P27.Run();
     }
 }
