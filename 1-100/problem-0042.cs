@@ -14,7 +14,7 @@ internal class P42
             { "v", 22 },{ "w", 23 },{ "x", 24 },{ "y", 25 },{ "z", 26 }
         };
 
-        string text = File.ReadAllText("C:\\Users\\adunderdale\\p42.txt");
+        string text = File.ReadAllText("path to words.txt");
         string[] words = text.Split(",");
 
         for (int i = 0; i < words.Length; i++)
