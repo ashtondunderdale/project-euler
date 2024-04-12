@@ -1,6 +1,6 @@
 ﻿namespace proj_euler;
 
-internal class P0009 : Problem
+internal class P0034 : Problem
 {
     public override dynamic Solve()
     {

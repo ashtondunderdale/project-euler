@@ -4,6 +4,6 @@ internal class P0049 : Problem
 {
     public override dynamic Solve()
     {
-        return 0;
+        return NotSolved();
     }
 }

@@ -2,9 +2,5 @@
 
 internal class ProjectEuler
 {
-    static void Main() 
-    {
-        int ANSWER = Problem.Solve<P0023>();
-        Console.Write(ANSWER);
-    }
+    static void Main() => Problem.Solve<P0051>();
 }
