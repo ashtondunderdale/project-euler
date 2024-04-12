@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P23
+internal class P0023 : Problem
 {
-    public static void Run() // please fix this, it takes like 2 minutes to get the answer
+    public override dynamic Solve() // please fix this, it takes like 2 minutes to get the answer
     {
         List<int> abundantNumbers = new();
         int intSum = 0;
@@ -35,12 +35,9 @@ internal class P23
             }
 
             if (!sumFound) 
-                intSum += i;
-
-            Console.WriteLine(i);
-            
+                intSum += i;            
         }
 
-        Console.Write(intSum);
+        return intSum;
     }
 }

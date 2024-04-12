@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P40
+internal class P0040 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         string c = "";
 
@@ -18,6 +18,6 @@ internal class P40
             if (index < c.Length)
                 product *= (int)char.GetNumericValue(c[index]);
 
-        Console.Write(product);
+        return product;
     }
 }

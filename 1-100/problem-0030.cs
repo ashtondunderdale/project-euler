@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P30
+internal class P0030 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         double totalSum = 0;
 
@@ -20,6 +20,6 @@ internal class P30
             if (sum == i) totalSum += sum;
         }
 
-        Console.Write(totalSum);
+        return totalSum;
     }
 }

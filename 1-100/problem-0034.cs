@@ -1,35 +1,32 @@
-﻿using System;
+﻿namespace proj_euler;
 
-namespace proj_euler
+internal class P0009 : Problem
 {
-    class P34
+    public override dynamic Solve()
     {
-        public static void Run()
+        int totalFactorialSum = 0;
+
+        for (int i = 10; i < 10000000; i++)
         {
-            int totalFactorialSum = 0;
+            int totalSum = 0;
+            int number = i;
 
-            for (int i = 10; i < 10000000; i++)
+            while (number > 0)
             {
-                int totalSum = 0;
-                int number = i;
+                int digit = number % 10;
+                int factorialSum = 1;
 
-                while (number > 0)
-                {
-                    int digit = number % 10;
-                    int factorialSum = 1;
-
-                    for (int j = digit; j > 0; j--) 
-                        factorialSum *= j;
-                    
-                    totalSum += factorialSum;
-                    number /= 10;
-                }
-
-                if (totalSum == i)
-                    totalFactorialSum += totalSum;
+                for (int j = digit; j > 0; j--) 
+                    factorialSum *= j;
+                
+                totalSum += factorialSum;
+                number /= 10;
             }
 
-            Console.Write(totalFactorialSum);
+            if (totalSum == i)
+                totalFactorialSum += totalSum;
         }
+
+        return totalFactorialSum;
     }
 }

@@ -3,9 +3,9 @@
 namespace proj_euler;
 
 
-internal class P3
+internal class P0003 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         long n = 600851475143;
         long largestFactor = 1;
@@ -28,6 +28,6 @@ internal class P3
         if (n > 2) 
             largestFactor = n;
 
-        Console.Write(largestFactor);
+        return largestFactor;
     }
 }

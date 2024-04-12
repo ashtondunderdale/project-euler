@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P15
+internal class P0015 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         BigInteger result = 1;
 
@@ -14,6 +14,6 @@ internal class P15
             result /= i;
         }
 
-        Console.WriteLine(result);
+        return result;
     }
 }

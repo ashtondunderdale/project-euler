@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P32
+internal class P0032 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         List<int> productSum = new();
 
@@ -18,7 +18,7 @@ internal class P32
             }
         }
 
-        Console.Write(productSum.Sum());
+        return productSum.Sum();
     }
 
     private static bool IsPandigital(string concatenatedString)

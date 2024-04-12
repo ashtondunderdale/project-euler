@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P20
+internal class P0020 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         BigInteger factorialSum = 1;
 
@@ -15,7 +15,7 @@ internal class P20
 
         foreach (char c in factorialSum.ToString())
             digitSum += c - '0';
-        
-        Console.Write(digitSum);
+
+        return digitSum;
     }
 }

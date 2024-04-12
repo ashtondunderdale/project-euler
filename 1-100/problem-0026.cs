@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P26
+internal class P0026 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int largestCycleLength = 0, largestDenominator = 0;
 
@@ -14,7 +14,7 @@ internal class P26
                 (largestCycleLength, largestDenominator) = (length, i);
         }
 
-        Console.WriteLine(largestDenominator);
+        return largestDenominator;
     }
 
     static int FindCycleLength(int d) 

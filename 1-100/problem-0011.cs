@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-class P11
+internal class P0011 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int[,] grid = new int[,] {
             {08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08},
@@ -56,7 +56,6 @@ class P11
             for (int col = 0; col < 17; col++)
             {
                 int product1 = grid[row, col] * grid[row + 1, col + 1] * grid[row + 2, col + 2] * grid[row + 3, col + 3];
-
                 int product2 = grid[row, col + 3] * grid[row + 1, col + 2] * grid[row + 2, col + 1] * grid[row + 3, col];
 
                 if (product1 > maxProduct)
@@ -67,6 +66,6 @@ class P11
             }
         }
 
-        Console.WriteLine(maxProduct);
+        return maxProduct;
     }
 }

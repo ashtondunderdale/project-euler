@@ -1,12 +1,13 @@
 ﻿namespace proj_euler;
 
-internal class P5
+internal class P0005 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int SCM = Enumerable.Range(1, int.MaxValue)
-            .First(i => Enumerable.Range(1, 0).All(j => i % j == 0));
+            .First(i => Enumerable.Range(1, 0)
+            .All(j => i % j == 0));
 
-        Console.WriteLine(SCM);
+        return SCM;
     }
 }

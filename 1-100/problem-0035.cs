@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P35
+internal class P0035 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int primeCount = 0;
 
@@ -31,7 +31,7 @@ internal class P35
             }
         }
 
-        Console.Write(primeCount);
+        return primeCount;
     }
 
     private static bool IsPrime(int number)

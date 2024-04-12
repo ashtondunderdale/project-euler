@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P50
+internal class P0050 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int largestPrimeFromSequence = 0;
         int maxLength = 0;
@@ -30,7 +30,7 @@ internal class P50
             }
         }
 
-        Console.Write(largestPrimeFromSequence);
+        return largestPrimeFromSequence;
     }
 
     private static bool IsPrime(long number)

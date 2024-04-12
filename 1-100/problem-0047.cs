@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P47
+internal class P0047 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         for (int i = 0; ; i++) 
         {
@@ -14,8 +14,7 @@ internal class P47
             if (factorsFirst.Count == 4 && factorsSecond.Count == 4 && 
                 factorsThird.Count == 4 && factorsFourth.Count == 4) 
             {
-                Console.WriteLine(i);
-                break;
+                return i;
             }        
         }
     }

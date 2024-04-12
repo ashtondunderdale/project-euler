@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P21
+internal class P0021 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int perfectNumberSum = 0;
 
@@ -22,6 +22,6 @@ internal class P21
                 perfectNumberSum += factorSum;     
         }
 
-        Console.Write(perfectNumberSum);
+        return perfectNumberSum;
     }
 }

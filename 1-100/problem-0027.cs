@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P27
+internal class P0027 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int largestPrimeSequence = 0;
         int product = 0;
@@ -18,7 +18,7 @@ internal class P27
                     (largestPrimeSequence, product) = (n, a * b);
             }
 
-        Console.Write(product);
+        return product;
     }
 
     private static bool IsPrime(int number)

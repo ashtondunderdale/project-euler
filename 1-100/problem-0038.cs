@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P38
+internal class P0038 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int largestPandigital = 0;
 
@@ -24,7 +24,7 @@ internal class P38
             }
         }
 
-        Console.WriteLine(largestPandigital);
+        return largestPandigital;
     }
 
     private static bool IsPandigital(string concatenatedString)

@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P41
+internal class P0041 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int largestPandigitalPrime = 0;
 
@@ -11,7 +11,7 @@ internal class P41
                 if (i > largestPandigitalPrime)
                     largestPandigitalPrime = i;
 
-        Console.Write(largestPandigitalPrime);
+       return largestPandigitalPrime;
     }
 
     private static bool IsPandigital(string concatenatedString)

@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P25
+internal class P0025 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         BigInteger first = 0, second = 1;
         int index = 0;
@@ -18,6 +18,6 @@ internal class P25
             second = newTerm;
         }
 
-        Console.WriteLine(index);
+        return index;
     }
 }

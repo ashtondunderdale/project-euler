@@ -1,48 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using proj_euler;
 
-namespace proj_euler
+internal class P0014 : Problem
 {
-    internal class P14
+    public override dynamic Solve()
     {
-        public static void Run()
+        int maxSeq = 0;
+        int maxSeqNum = 1;
+        Dictionary<long, int> memo = new(); 
+
+        for (int i = 1; i < 1000000; i++)
         {
-            int maxSeq = 0;
-            int maxSeqNum = 1;
-            Dictionary<long, int> memo = new(); 
+            long seq = i;
+            int seqCount = 0;
 
-            for (int i = 1; i < 1000000; i++)
+            while (seq != 1)
             {
-                long seq = i;
-                int seqCount = 0;
-
-                while (seq != 1)
+                if (memo.ContainsKey(seq)) 
                 {
-                    if (memo.ContainsKey(seq)) 
-                    {
-                        seqCount += memo[seq];
-                        break;
-                    }
-
-                    if (seq % 2 == 0)
-                        seq = seq / 2;
-
-                    else
-                        seq = (3 * seq) + 1;
-
-                    seqCount++;
+                    seqCount += memo[seq];
+                    break;
                 }
 
-                memo[i] = seqCount; 
+                if (seq % 2 == 0)
+                    seq /= 2;
 
-                if (seqCount > maxSeq)
-                {
-                    maxSeq = seqCount;
-                    maxSeqNum = i;
-                }
+                else
+                    seq = (3 * seq) + 1;
+
+                seqCount++;
             }
 
-            Console.WriteLine(maxSeqNum);
+            memo[i] = seqCount; 
+
+            if (seqCount > maxSeq)
+            {
+                maxSeq = seqCount;
+                maxSeqNum = i;
+            }
         }
+
+        return maxSeqNum;
     }
 }

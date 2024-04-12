@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P33
+internal class P0033 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int fractionProductNumerator = 1;
         int fractionProductDenominator = 1;
@@ -17,7 +17,7 @@ internal class P33
                 }
             }
 
-        Console.Write(fractionProductNumerator / fractionProductDenominator);
+        return fractionProductNumerator / fractionProductDenominator;
     }
 
     static bool HasCommonDigits(int n, int d) 

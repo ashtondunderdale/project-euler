@@ -1,10 +1,11 @@
 ﻿namespace proj_euler;
 
-internal class P45
+internal class P0045 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int count = 0;
+
         for (long i = 2; ; i++) 
         {
             long triNum = i * (i + 1) / 2;
@@ -14,10 +15,7 @@ internal class P45
                 count++;
 
                 if (count == 2) 
-                {
-                    Console.WriteLine(triNum);
-                    return;
-                }
+                    return triNum;
             }
         }     
     }

@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P13
+internal class P0013 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         string[] str = new string[]
         {
@@ -118,7 +118,6 @@ internal class P13
             sum += num;
         }
 
-        Console.WriteLine(sum.ToString().Substring(0, 10));
+        return sum.ToString()[..10];
     }
 }
-

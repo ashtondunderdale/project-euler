@@ -1,23 +1,18 @@
-﻿using System;
-using System.IO;
-using System.Linq;
+﻿namespace proj_euler;
 
-namespace proj_euler
+internal class P0022 : Problem
 {
-    internal class P22
+    public override dynamic Solve()
     {
-        public static void Run()
-        {
-            string[] names = File.ReadAllText("C:\\Users\\adunderdale\\names.txt")
-                .Split(',')
-                .Select(name => name.Trim('"'))
-                .OrderBy(name => name)
-                .ToArray();
+        string[] names = File.ReadAllText("path to file")
+            .Split(',')
+            .Select(name => name.Trim('"'))
+            .OrderBy(name => name)
+            .ToArray();
 
-            int totalNameScore = names.Select((name, index) => (index + 1) * name.ToLower()
-                .Sum(c => c - 'a' + 1)).Sum();
+        int totalNameScore = names.Select((name, index) => (index + 1) * name.ToLower()
+            .Sum(c => c - 'a' + 1)).Sum();
 
-            Console.WriteLine(totalNameScore);
-        }
+        return totalNameScore;
     }
 }

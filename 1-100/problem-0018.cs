@@ -1,10 +1,8 @@
-﻿using System;
+﻿namespace proj_euler;
 
-namespace proj_euler;
-
-internal class P18
+internal class P0018 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int[][] arr = new int[][]
         {
@@ -29,6 +27,6 @@ internal class P18
             for (int j = 0; j < arr[i].Length; j++)
                 arr[i][j] += Math.Max(arr[i + 1][j], arr[i + 1][j + 1]);
 
-        Console.WriteLine(arr[0][0]);
+        return arr[0][0];
     }
 }

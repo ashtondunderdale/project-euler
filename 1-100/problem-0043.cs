@@ -1,9 +1,9 @@
 ﻿namespace proj_euler;
 
-internal class P43
+internal class P0043 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
-
+        return 0;
     }
 }

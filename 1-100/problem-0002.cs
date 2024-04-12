@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P2
+internal class P0002 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int previousTerm = 0, currentTerm = 1, sum = 0;
 
@@ -15,6 +15,6 @@ internal class P2
             if (currentTerm % 2 == 0) sum += currentTerm;
         }
 
-        Console.WriteLine(sum);
+        return sum;
     }
 }

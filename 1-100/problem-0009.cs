@@ -1,27 +1,23 @@
-﻿using System;
+﻿namespace proj_euler;
 
-namespace proj_euler
+internal class P0009 : Problem
 {
-    internal class P9
+    public override dynamic Solve()
     {
-        public static void Run()
+        int targetSum = 1000;
+        long answer = 0;
+
+        for (int a = 1; a < targetSum; a++)
         {
-            int targetSum = 1000;
-
-            for (int a = 1; a < targetSum; a++)
+            for (int b = a + 1; b < targetSum; b++)
             {
-                for (int b = a + 1; b < targetSum; b++)
-                {
-                    int c = targetSum - a - b;
+                int c = targetSum - a - b;
 
-                    if (a * a + b * b == c * c)
-                    {
-                        long product = (long)a * b * c;
-                        Console.WriteLine(product);
-                        return;
-                    }
-                }
+                if (a * a + b * b == c * c)
+                    answer = (long)a * b * c;
             }
         }
+
+        return answer;
     }
 }

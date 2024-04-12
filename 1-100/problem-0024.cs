@@ -1,15 +1,13 @@
-﻿using System;
+﻿namespace proj_euler;
 
-namespace proj_euler;
-
-internal class P24
+internal class P0024 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         string str = "0123456789";
 
         string result = GetNthPermutation(str, 1000000);
-        Console.WriteLine(result);
+        return result;
     }
 
     private static string GetNthPermutation(string str, int n)

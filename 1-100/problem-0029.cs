@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P29
+internal class P0029 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         List<double> distinctPowers = new();
 
@@ -15,6 +15,6 @@ internal class P29
             }
         }
 
-        Console.Write(distinctPowers.Count); 
+        return distinctPowers.Count; 
     }
 }

@@ -1,18 +1,13 @@
 ﻿namespace proj_euler;
 
-internal class P46
+internal class P0046 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         for (int i = 9; ; i++) 
             if (i % 2 != 0 && !IsPrime(i)) 
-            {
                 if (!IsGoldbachValid(i)) 
-                {
-                    Console.Write(i);
-                    return;
-                }
-            }
+                    return i;
     }
 
     private static bool IsGoldbachValid(long num)

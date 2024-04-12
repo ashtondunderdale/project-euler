@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P19
+internal class P0019 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int sundays = 0;
 
@@ -30,6 +30,6 @@ internal class P19
             }
         }
 
-        Console.WriteLine(sundays);
+        return sundays;
     }
 }

@@ -1,10 +1,10 @@
 ﻿namespace proj_euler;
 
-internal class P44
+internal class P0044 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
-        
+        int answer = 0;
         for (int i = 1; i <= 10000; i++) 
         {
             int pentNumA = i * (3*i - 1) / 2;
@@ -14,11 +14,11 @@ internal class P44
                 int pentNumB = j * (3 * j - 1) / 2;
 
                 if (IsPentagonal(pentNumA + pentNumB) && IsPentagonal(pentNumA - pentNumB)) 
-                {
-                    Console.Write(pentNumA - pentNumB);
-                }
+                    answer = pentNumA - pentNumB;
             }
         }
+
+        return answer;
     }
 
     private static bool IsPentagonal(int num)

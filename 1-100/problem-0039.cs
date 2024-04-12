@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P39
+internal class P0039 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         List<List<double>> solutions = new() { };
         int largestSolutionCount = 0;
@@ -37,6 +37,6 @@ internal class P39
             }
         }
 
-        Console.WriteLine(max);
+        return max;
     }
 }

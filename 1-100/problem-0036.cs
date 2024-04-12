@@ -2,9 +2,9 @@
 
 namespace proj_euler;
 
-internal class P36
+internal class P0036 : Problem
 {
-    public static void Run()
+    public override dynamic Solve()
     {
         int sum = 0;
 
@@ -19,7 +19,7 @@ internal class P36
             }
         }
 
-        Console.Write(sum);
+        return sum;
     }
 
     private static bool IsPalindrome(BigInteger number)

@@ -1,8 +1,8 @@
 ﻿namespace proj_euler;
 
-internal class P42
+internal class P0042 : Problem
 {
-    public static void Run() 
+    public override dynamic Solve()
     {
         int triangleSum = 0;
 
@@ -29,7 +29,7 @@ internal class P42
                 triangleSum++;
         }
 
-        Console.Write(triangleSum);
+        return triangleSum;
     }
 
     static bool IsTriangleNumber(int num)
