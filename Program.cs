@@ -2,5 +2,5 @@
 
 internal class ProjectEuler
 {
-    static void Main() => P48.Run();
+    static void Main() => P50.Run();
 }
